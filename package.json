@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.37.0"
   }
 }
