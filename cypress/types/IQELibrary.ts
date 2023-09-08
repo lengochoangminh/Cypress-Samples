@@ -1,6 +1,7 @@
-import { IUIUtil, IA11yUtil } from "./index"
+import { IA11yUtil, IApplitoolsUtil, IUIUtil } from "./index"
 
 export interface IQELibrary {
     ui?: IUIUtil;
     a11y?: IA11yUtil;
+    visual?: IApplitoolsUtil;
 }
