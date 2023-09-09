@@ -12,3 +12,4 @@
    + Open Terminal, then install the dependencies
       $npm install @applitools/eyes-cypress
       $npx eyes-setup
+ - Part #4: Analytics test

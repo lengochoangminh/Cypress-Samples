@@ -15,7 +15,6 @@
 
 import '@applitools/eyes-cypress/commands'
 
-
 // Import commands.js using ES2015 syntax:
 // import './commands'
 
@@ -23,7 +22,9 @@ import '@applitools/eyes-cypress/commands'
 // require('./commands')
 
 import { QELibrary } from "./QELibrary";
+
 global.qe = new QELibrary();
 
 global.enableAlly = true;
 global.enableApplitools = true;
+global.enableAnalytics = true;
