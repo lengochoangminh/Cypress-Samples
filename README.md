@@ -13,3 +13,10 @@
       $npm install @applitools/eyes-cypress
       $npx eyes-setup
  - Part #4: Analytics test
+
+## Docker Tutorial
+ - Prerequisite: Installed the Docker Desktop + Account to login
+
+### Run the test on multiple browsers using Docker Compose: "docker-compose.yml"
+ - Just run one CLI to setup + run all tests under e2e: $docker compose up
+ - Using **cypress/included** - This Docker image comes with all operating system dependencies, Cypress, and browsers like Chrome and Firefox installed globally
