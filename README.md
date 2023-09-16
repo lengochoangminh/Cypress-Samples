@@ -27,3 +27,13 @@
     + Option "it": specifies that the container should be run in interactive mode.
     + Option "-v": argumentsto Docker run are for creating storage space inside a container.
     + Option "$PWD": mounts the current working directory (represented by the "$PWD" variable).
+
+### Running headless Cypress tests locally using Docker File 
+  - Docker File Walkthrough
+   + FROM cypress/included:12.8.1
+   + WORKDIR /app: It sets the working directory for any subsequent commands to /app. This means that any following commands, such as "COPY", "RUN", or "CMD", will be performed within this directory.
+   + COPY . .: It copies all the files from the current directory to the /app directory in the Docker image. The first “.” refers to the source directory on the host machine, and the second “.” refers to the destination directory within the container.
+   + RUN npm install: It installs the dependencies for the project using npm.
+   + CMD ["npm", "run", "npx cypress run"]: It specifies the command that will be executed when a container is started from this image. It runs the cypress run command using npm.
+  - Building the Docker Image : docker build -t <image_name>
+  - Run the Docker image after building and execute the tests: docker run imagename:tagname
