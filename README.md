@@ -20,3 +20,10 @@
 ### Run the test on multiple browsers using Docker Compose: "docker-compose.yml"
  - Just run one CLI to setup + run all tests under e2e: $docker compose up
  - Using **cypress/included** - This Docker image comes with all operating system dependencies, Cypress, and browsers like Chrome and Firefox installed globally
+
+ ### Running headless Cypress tests locally using Docker Image
+  - docker run -it -v $PWD:/e2e -w /e2e cypress/included:12.8.1 --browser electron
+  - docker run -it -v $PWD:/e2e -w /e2e cypress/included:12.8.1 --browser electron --spec cypress/e2e/DemoQELibrary.cy.ts
+    + Option "it": specifies that the container should be run in interactive mode.
+    + Option "-v": argumentsto Docker run are for creating storage space inside a container.
+    + Option "$PWD": mounts the current working directory (represented by the "$PWD" variable).
