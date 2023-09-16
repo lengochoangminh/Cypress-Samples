@@ -37,3 +37,11 @@
    + CMD ["npm", "run", "npx cypress run"]: It specifies the command that will be executed when a container is started from this image. It runs the cypress run command using npm.
   - Building the Docker Image : docker build -t <image_name>
   - Run the Docker image after building and execute the tests: docker run imagename:tagname
+
+### Running Cypress tests in Docker Container on CI/CD (GitHub Actions)
+ - Create a workflow file at .github/workflows/main.yml
+  + Trigger condition “on [push]”. Whenever there would be code push to the remote branch, this workflow would be executed.
+  + The first step, would checkout the code from the GitHub repository using GitHub Actions “actions/checkout@v3”.
+  + The second step would run the Cypress tests: “cypress-io/github-action@v5”. This action provides npm installation, custom caching, and additional configuration options and simplifies the setup of advanced workflows using Cypress with GitHub Actions platform.
+- Commit & push your code to github
+- Login github account > Select Actions to see the task will be executed
