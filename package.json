@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run --env type=actual",
+    "base": "./node_modules/.bin/cypress run --env type=base"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "cypress-visual-regression": "^3.0.0"
   }
 }
